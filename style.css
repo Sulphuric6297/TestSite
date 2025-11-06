@@ -1,15 +1,27 @@
-/* Base styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent body from scrolling */
-    background-color: #000;
-    color: #0F0;
-    font-family: 'Courier New', Courier, monospace;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --background-color: #121212;
+    --card-background: rgba(28, 28, 28, 0.85);
+    --primary-text: #EAEAEA;
+    --secondary-text: #B3B3B3;
+    --accent-color: #00A8E8;
+    --border-color: #333;
 }
 
-#matrix-canvas {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#background-canvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,183 +30,143 @@ body, html {
     z-index: -1;
 }
 
-/* Wrapper for scrollable content */
-.content-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto; /* Enable vertical scrolling */
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Business Card Styling */
-.business-card {
+.card {
+    background: var(--card-background);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    padding: 40px;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid #0a5c0a;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
-}
-
-/* Header */
-.card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #0a5c0a;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid #0F0;
-    margin-right: 25px;
-    flex-shrink: 0;
-}
-
-.header-text h1 {
-    margin: 0;
-    font-size: 2.8em;
-    text-shadow: 0 0 5px #0F0, 0 0 10px #0F0;
-}
-
-.job-title {
-    margin: 5px 0 0;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-}
-
-.job-title i {
-    margin-right: 8px;
-}
-
-/* Main Body */
-.card-body h2 {
-    font-size: 2em;
-    text-shadow: 0 0 5px #0F0;
-    border-bottom: 1px solid #0a5c0a;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #0a5c0a;
-    margin: 30px 0;
-}
-
-/* Contact Info */
-.contact-info a, .security-tool a {
-    color: #0F0;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 10px 5px;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-    border-radius: 4px;
-}
-
-.contact-info a:hover, .security-tool a:hover {
-    background-color: rgba(0, 255, 0, 0.1);
-    text-shadow: 0 0 5px #0F0;
-}
-
-.contact-info i {
-    font-size: 1.5em;
-    margin-right: 15px;
-    width: 25px; /* Align text */
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     text-align: center;
 }
 
-.contact-download .contact-instructions {
-    padding-left: 50px;
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--accent-color);
+}
+
+.job-title {
+    font-size: 1.2em;
+    color: var(--secondary-text);
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--primary-text);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-grid a, .contact-download a, #security-tool a {
+    color: var(--primary-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-grid a:hover, .contact-download a:hover, #security-tool a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+#contact i {
+    font-size: 1.5em;
+}
+
+.contact-instructions {
+    text-align: left;
     font-size: 0.9em;
-    opacity: 0.7;
-    margin-top: 5px;
+    color: var(--secondary-text);
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 2px solid var(--border-color);
 }
 
-.linkedin-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 18px;
-    margin-left: 3px;
-}
-
-/* Services */
-.service-grid {
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    text-align: left;
 }
 
-.service-item {
-    padding: 15px;
-    border: 1px solid #0a5c0a;
-    background-color: rgba(0, 0, 0, 0.3);
+.service {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.service-item h3 {
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
     margin-top: 0;
+    font-size: 1.2em;
+    color: var(--accent-color);
+}
+
+#bio p, #bio ul {
     font-size: 1.1em;
-}
-.service-item p {
-    margin-bottom: 0;
-    font-size: 0.9em;
-    opacity: 0.8;
-}
-
-/* Bio */
-.bio p, .bio ul {
     line-height: 1.6;
+    text-align: left;
+    color: var(--secondary-text);
 }
 
-.bio ul {
+#bio ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.bio li::before {
+#bio li::before {
     content: '»';
     margin-right: 10px;
-    color: #0F0;
+    color: var(--accent-color);
 }
 
-.call-to-action {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.call-to-action i {
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-/* Responsive */
 @media (max-width: 600px) {
-    .business-card {
-        margin: 10px;
-        padding: 15px;
+    body {
+        padding: 10px;
     }
 
-    .card-header {
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .contact-grid {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .header-text h1 {
-        font-size: 2.2em;
+        align-items: stretch;
     }
 }
