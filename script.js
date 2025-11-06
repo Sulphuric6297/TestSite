@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     tsParticles.load("background-canvas", {
         particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
+            number: { value: 30, density: { enable: true, value_area: 800 } },
             color: { value: "#ffffff" },
             shape: { type: "circle" },
-            opacity: { value: 0.5, random: false },
-            size: { value: 3, random: true },
-            links: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+            opacity: { value: 0.2, random: true },
+            size: { value: 2, random: true },
+            links: { enable: false },
             move: {
                 enable: true,
-                speed: 2,
+                speed: 0.5,
                 direction: "none",
-                random: false,
+                random: true,
                 straight: false,
                 out_mode: "out",
                 bounce: false,
@@ -19,13 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         interactivity: {
             events: {
-                onhover: { enable: true, mode: "repulse" },
-                onclick: { enable: true, mode: "push" },
+                onhover: { enable: true, mode: "bubble" },
                 resize: true,
             },
             modes: {
-                repulse: { distance: 100, duration: 0.4 },
-                push: { particles_nb: 4 },
+                bubble: {
+                    distance: 200,
+                    size: 3,
+                    duration: 2,
+                    opacity: 0.8,
+                },
             },
         },
         retina_detect: true,

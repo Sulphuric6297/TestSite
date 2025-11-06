@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-    --background-color: #121212;
-    --card-background: rgba(28, 28, 28, 0.85);
-    --primary-text: #EAEAEA;
-    --secondary-text: #B3B3B3;
-    --accent-color: #00A8E8;
-    --border-color: #333;
+    --background-color: #000000;
+    --card-background: rgba(28, 28, 30, 0.7);
+    --primary-text: #FFFFFF;
+    --secondary-text: #8D8D92;
+    --accent-color: #FFFFFF;
+    --border-color: rgba(84, 84, 88, 0.65);
+    --hover-color: rgba(58, 58, 60, 0.8);
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--primary-text);
     margin: 0;
@@ -19,6 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #background-canvas {
@@ -32,113 +35,127 @@ body {
 
 .card {
     background: var(--card-background);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-radius: 24px;
     border: 1px solid var(--border-color);
-    padding: 40px;
-    max-width: 800px;
+    padding: 50px;
+    max-width: 750px;
     width: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     text-align: center;
 }
 
 header {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: var(--accent-color);
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: var(--primary-text);
 }
 
 .job-title {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: var(--secondary-text);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h2 {
-    font-size: 1.8em;
-    color: var(--primary-text);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--secondary-text);
+    border: none;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .contact-grid {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-grid a, .contact-download a, #security-tool a {
     color: var(--primary-text);
+    background-color: var(--hover-color);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
 }
 
 .contact-grid a:hover, .contact-download a:hover, #security-tool a:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+    background-color: rgba(80, 80, 80, 0.8);
 }
 
 #contact i {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .contact-instructions {
     text-align: left;
     font-size: 0.9em;
     color: var(--secondary-text);
-    margin-top: 15px;
-    padding-left: 15px;
-    border-left: 2px solid var(--border-color);
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 12px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
     text-align: left;
 }
 
 .service {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.service:hover {
-    transform: translateY(-5px);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 .service h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-    color: var(--accent-color);
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+.service p {
+    color: var(--secondary-text);
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
 }
 
 #bio p, #bio ul {
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: left;
     color: var(--secondary-text);
+}
+
+#bio h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--primary-text);
+    margin-top: 20px;
+    text-align: left;
 }
 
 #bio ul {
@@ -147,10 +164,15 @@ section {
 }
 
 #bio li::before {
-    content: '»';
-    margin-right: 10px;
-    color: var(--accent-color);
+    content: '—';
+    margin-right: 12px;
+    color: var(--secondary-text);
 }
+
+#security-tool a {
+    display: inline-flex;
+}
+
 
 @media (max-width: 600px) {
     body {
@@ -158,15 +180,10 @@ section {
     }
 
     .card {
-        padding: 20px;
+        padding: 25px;
     }
 
     h1 {
-        font-size: 2em;
-    }
-
-    .contact-grid {
-        flex-direction: column;
-        align-items: stretch;
+        font-size: 2.2em;
     }
 }
