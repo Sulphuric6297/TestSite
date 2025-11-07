@@ -1,0 +1,65 @@
+{
+  "personalInfo": {
+    "name": "David Izquierdo",
+    "jobTitle": "Lead I.T Technician"
+  },
+  "contact": {
+    "links": [
+      { "icon": "iconoir-code", "text": "Wiredinc.com", "url": "https://www.wiredinc.com/business-services" },
+      { "icon": "iconoir-mail", "text": "David@Wiredinc.com", "url": "mailto:David@Wiredinc.com" },
+      { "icon": "iconoir-lock", "text": "Send a secure message", "url": "https://bracket.email/davidiz" },
+      { "icon": "iconoir-phone", "text": "828-634-1828", "url": "tel:828-634-1828" },
+      { "icon": "iconoir-map", "text": "121 Highlands Rd, Franklin NC", "url": "https://maps.app.goo.gl/UvzXQ6uMvx8nYtGw9" },
+      { "icon": "iconoir-linkedin", "text": "LinkedIn", "url": "https://www.linkedin.com/in/david-izquierdo-a21719330/" }
+    ],
+    "download": {
+      "url": "assets/David_Izquierdo.vcf",
+      "icon": "iconoir-user-plus",
+      "text": "Add me to your Contacts"
+    },
+    "instructions": {
+      "title": "Android User Instructions:",
+      "steps": [
+        "Tap the link to download the contact file.",
+        "If an \\"Open\\" button appears: Tap it, choose your contacts app, and select \\"Import.\\"",
+        "If no \\"Open\\" button appears: Download the file again, tap the highlighted filename in the pop-up, and select \\"Import.\\""
+      ]
+    }
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      { "title": "Managed IT Services", "description": "Let us handle your IT so you can focus on growing your business." },
+      { "title": "Networking & Cybersecurity", "description": "Keep your business safe and secure with reliable network solutions." },
+      { "title": "Help Desk", "description": "Responsive support for all your IT issues." },
+      { "title": "Managed Backups", "description": "Protect your crucial business data with reliable backup solutions." },
+      { "title": "Remote Monitoring", "description": "Proactively address issues before they become problems." },
+      { "title": "Disaster Planning & Recovery", "description": "Be prepared for the unexpected with our disaster recovery plans." },
+      { "title": "IT Consulting", "description": "Get expert advice to align your IT strategy with your business goals." },
+      { "title": "WiFi Systems", "description": "Scalable and secure WiFi solutions to keep your business connected." }
+    ]
+  },
+  "bio": {
+    "title": "Bio",
+    "paragraphs": [
+      "Since 2013, I've been part of the Wired team, stepping into the Lead IT Technician role in 2017. I specialize in network maintenance, cybersecurity, and developing tailored IT solutions to keep local businesses secure and efficient.",
+      "What I love most is the dynamic nature of the field. Every day brings new challenges that push me to think creatively and stay ahead of the curve. Knowing my efforts help businesses operate smoothly is incredibly rewarding."
+    ],
+    "expertise": {
+      "title": "Areas of Expertise:",
+      "items": [
+        "Solving Technical Challenges",
+        "Providing Strategic IT Advice",
+        "Building Lasting Client Relationships"
+      ]
+    }
+  },
+  "securityTool": {
+    "title": "Security Assessment Tool",
+    "link": {
+      "url": "https://wiredinc.email.security",
+      "icon": "iconoir-shield",
+      "text": "Is your Email Vulnerable? Check HERE"
+    }
+  }
+}
